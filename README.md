@@ -25,6 +25,6 @@ Here is what it should look like
 │       ├── tokyodark-theme.lua
 │       └── trouble.lua
 └── README.md
-```bash
+```
 4 directories, 19 files
 
