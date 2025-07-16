@@ -1,7 +1,7 @@
 clone and put the contents in your ~/.config/nvim directory
 
 Here is what it should look like
-`
+```bash
 .config/nvim
 ├── init.lua
 ├── lazy-lock.json
@@ -25,6 +25,6 @@ Here is what it should look like
 │       ├── tokyodark-theme.lua
 │       └── trouble.lua
 └── README.md
-`
+```bash
 4 directories, 19 files
 
