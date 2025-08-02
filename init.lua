@@ -14,11 +14,13 @@ vim.keymap.set("n", "<leader>b", "<cmd>FzfLua buffers<cr>", { desc = "List Buffe
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "List Buffers" })
 vim.keymap.set("n", "<leader>g", "<cmd>FzfLua grep<cr>", { desc = "List Buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "e", "<cmd>Ex<cr>", { desc = "List Buffers" })
 
 -- color themes
 -- vim.cmd.colorscheme("catppuccin")
 vim.cmd([[colorscheme moonfly]])
 -- require("plugins.tokyodark-theme")
+-- require("plugins.gruvbox")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
