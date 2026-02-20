@@ -3,7 +3,6 @@ require("config.nvim-treesitter")
 require("plugins.telescope")
 require("plugins.nvim-treesitter")
 require("plugins.fzf-lua")
-require("plugins.roslyn")
 local builtin = require("telescope.builtin")
 vim.cmd([[
 set nu
@@ -12,7 +11,10 @@ set clipboard=unnamedplus
 ]])
 vim.keymap.set("n", "<leader>b", "<cmd>FzfLua buffers<cr>", { desc = "List Buffers" })
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "List Buffers" })
+vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua lsp_references<cr>", { desc = "List Buffers" })
+vim.keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_definitions<cr>", { desc = "List Buffers" })
 vim.keymap.set("n", "<leader>g", "<cmd>FzfLua grep<cr>", { desc = "List Buffers" })
+vim.keymap.set("n", "<leader>cg", "<cmd>FzfLua git_commits<cr>", { desc = "List Buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "e", "<cmd>Ex<cr>", { desc = "List Buffers" })
 
@@ -26,6 +28,7 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("clangd")
+vim.lsp.enable("omnisharp")
 
 vim.lsp.config("luals", {
 	on_init = function(client)
