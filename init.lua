@@ -1,7 +1,5 @@
 require("config.lazy")
-require("config.nvim-treesitter")
 require("plugins.telescope")
-require("plugins.nvim-treesitter")
 require("plugins.fzf-lua")
 local builtin = require("telescope.builtin")
 vim.cmd([[
