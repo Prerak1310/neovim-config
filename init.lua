@@ -17,10 +17,9 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 vim.keymap.set("n", "e", "<cmd>Ex<cr>", { desc = "List Buffers" })
 
 -- color themes
--- vim.cmd.colorscheme("catppuccin")
-vim.cmd([[colorscheme moonfly]])
--- require("plugins.tokyodark-theme")
--- require("plugins.gruvbox")
+-- vim.cmd([[colorscheme moonfly]])
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")

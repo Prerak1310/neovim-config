@@ -1,12 +1,30 @@
 return {
-	"sainnhe/gruvbox-material",
-	lazy = false,
+	"ellisonleao/gruvbox.nvim",
 	priority = 1000,
-	config = function()
-		-- Optionally configure and load the colorscheme
-		-- directly inside the plugin declaration.
-		vim.g.gruvbox_material_enable_italic = true
-		vim.g.gruvbox_material_foreground = "original"
-		-- vim.cmd.colorscheme("gruvbox-material")
+	opts = {
+		terminal_colors = true,
+		undercurl = true,
+		underline = true,
+		bold = true,
+		italic = {
+			strings = false,
+			emphasis = true,
+			comments = true,
+			operators = false,
+			folds = true,
+		},
+		strikethrough = true,
+
+		contrast = "soft", -- "hard", "soft", or ""
+
+		palette_overrides = {},
+		overrides = {},
+
+		dim_inactive = false,
+		transparent_mode = false,
+	},
+	config = function(_, opts)
+		require("gruvbox").setup(opts)
+		vim.cmd("colorscheme gruvbox")
 	end,
 }
