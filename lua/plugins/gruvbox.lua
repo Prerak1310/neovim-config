@@ -26,5 +26,14 @@ return {
 	config = function(_, opts)
 		require("gruvbox").setup(opts)
 		vim.cmd("colorscheme gruvbox")
+		vim.cmd([[
+highlight link RainbowDelimiterRed GruvboxRed
+highlight link RainbowDelimiterYellow GruvboxYellow
+highlight link RainbowDelimiterBlue GruvboxBlue
+highlight link RainbowDelimiterOrange GruvboxOrange
+highlight link RainbowDelimiterGreen GruvboxGreen
+highlight link RainbowDelimiterViolet GruvboxPurple
+highlight link RainbowDelimiterCyan GruvboxAqua
+]])
 	end,
 }
