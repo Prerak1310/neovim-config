@@ -8,3 +8,4 @@ vim.keymap.set("n", "<leader>cg", "<cmd>FzfLua git_commits<cr>")
 
 vim.keymap.set("n", "t", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "e", "<cmd>NvimTreeFocus<cr>")
+vim.keymap.set("n", "<leader>tf", "<cmd>NvimTreeFindFile<cr>")
